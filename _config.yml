@@ -1,0 +1,20 @@
+# Base configs
+baseurl: "http://www.vatsalmistry.me/nitinlalwani/"
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
+google_analytics: ""
+
+# UI configs
+title: "Nitin Lalwani Photography"
+subtitle: "See the world through my camera!"
+author: "Nitin Lalwani"
+bio: "I am a developer cum photographer and a tech aficionado from India. Love making teeny tiny apps solving tiny problems in life and now learning photography."
+web_design: "Vatsal Mistry"
+social_urls:
+  facebook: "https://www.facebook.com/nitin.lalwani.334"
+  twitter: "#"
+  instagram: "https://www.instagram.com/nitinlalwani02"
+  dribbble: "#"
+  linkedin: "#"
+  github: "#"
+  
