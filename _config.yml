@@ -1,5 +1,5 @@
 # Base configs
-baseurl: "http://www.nitinlalwani.github.io"
+baseurl: "http://nitinlalwani.github.io"
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 google_analytics: ""
@@ -16,4 +16,3 @@ social_urls:
   instagram: "https://www.instagram.com/nitinlalwani02"
   linkedin: "#"
   github: "https://github.com/nitinlalwani"
-  
