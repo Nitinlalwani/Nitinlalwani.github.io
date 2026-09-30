@@ -1,89 +1,354 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+<title>Nitin Lalwani | Business Systems Analyst and Scrum Master</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nitin Lalwani is a senior business systems analyst and Scrum Master in Toronto, working across cybersecurity, risk and operational resilience.">
+<meta property="og:title" content="Nitin Lalwani | Business Systems Analyst and Scrum Master">
+<meta property="og:description" content="Senior business systems analyst and Scrum Master in Toronto. Requirements, Agile delivery, cybersecurity and risk technology.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
 
-<!-- Wrapper -->
-<div id="wrapper">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a bold indigo hero with a monogram and quick facts carries the personality (coral highlight); below it a calm light page of story, expertise cards, a career timeline and credentials. */
+:root{
+  --bg:#f5f4fb;
+  --surface:#ffffff;
+  --fg:#15122b;
+  --muted:#5b587a;
+  --line:#dedbee;
+  --brand:#4a2fe0;
+  --brand-ink:#ffffff;
+  --brand-soft:#e9e5ff;
+  --coral:#ff6a55;
+  --coral-ink:#c2361f;
+  --mint:#1fa88a;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0c1d;--surface:#181534;--fg:#ece9ff;--muted:#a19dc6;--line:#2c2856;
+    --brand:#6b52ff;--brand-ink:#ffffff;--brand-soft:#241f52;--coral:#ff8874;--coral-ink:#ff8874;--mint:#4fd6b6;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e0c1d;--surface:#181534;--fg:#ece9ff;--muted:#a19dc6;--line:#2c2856;
+  --brand:#6b52ff;--brand-ink:#ffffff;--brand-soft:#241f52;--coral:#ff8874;--coral-ink:#ff8874;--mint:#4fd6b6;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65;padding-inline:20px;padding-block:24px 64px}
+.wrap{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:80px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--brand)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
 
-    <!-- Header -->
-    <header id="header">
-        <h1><a href="index.html">Nitin Lalwani<strong>Photography</strong></a></h1>
-        <nav>
-            <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About</a></li>
-            </ul>
-        </nav>
-    </header>
+header.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header.top .mark{font-family:var(--display);font-weight:700;font-size:22px;display:flex;align-items:center;gap:10px}
+header.top .mark i{width:14px;height:14px;border-radius:50%;background:var(--coral);display:inline-block}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:13px}
+nav a{color:var(--fg);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+nav a:hover{border-color:var(--coral)}
 
-    <!-- Main -->
-    <div id="main">
-        {% for image in site.static_files %}
-            {% if image.path contains 'fulls' %}
-                <article class="thumb">
-                    <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt="" data-name="{{ image.name }}"/></a>
-                    <!--<h2></h2>
-                    <p></p>-->
-                </article>
-            {% endif %}
-        {% endfor %}
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--brand);color:var(--brand-ink);border-radius:24px;padding:clamp(28px,6vw,64px);display:flex;flex-direction:column;gap:28px;margin-top:-8px;isolation:isolate}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;z-index:-1}
+.hero::before{width:420px;height:420px;right:-120px;top:-140px;background:rgba(255,255,255,.08)}
+.hero::after{width:220px;height:220px;right:90px;bottom:-110px;background:var(--coral);opacity:.9}
+.hero .label{color:rgba(255,255,255,.8)}
+.hero .id{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.mono-badge{width:60px;height:60px;border-radius:50%;background:var(--brand-ink);color:var(--brand);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:22px;flex:none}
+.hero h1{font-size:clamp(2.5rem,6.6vw,4.8rem);font-weight:700;letter-spacing:-.02em;max-width:16ch}
+.hero h1 em{font-style:normal;color:#ffd0c8}
+.hero .lede{max-width:58ch;font-size:1.18rem;color:rgba(255,255,255,.9)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:500;font-size:1rem;text-decoration:none;padding:12px 22px;border-radius:999px}
+.btn.primary{background:var(--brand-ink);color:var(--brand)}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.55);color:var(--brand-ink)}
+.btn:hover{transform:translateY(-2px)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px;max-width:760px}
+.fact{border-top:1px solid rgba(255,255,255,.4);padding-top:10px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact b{font-family:var(--display);font-weight:500;font-size:1.05rem}
+.fact span{font-size:13px;color:rgba(255,255,255,.78);line-height:1.35}
+
+section{display:flex;flex-direction:column;gap:24px}
+section h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:700;letter-spacing:-.01em}
+.intro{max-width:64ch;color:var(--muted);font-size:1.08rem}
+.story{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:start}
+.story .text{display:flex;flex-direction:column;gap:16px;color:var(--muted);font-size:1.08rem}
+.story .text strong{color:var(--fg);font-weight:600}
+.results{display:flex;flex-direction:column;gap:12px}
+.result{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:4px}
+.result b{font-family:var(--display);font-size:2.8rem;line-height:1;color:var(--brand);letter-spacing:-.02em}
+.result:nth-child(2) b{color:var(--coral-ink)}
+.result span{color:var(--muted);font-size:15px}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .dot{width:38px;height:38px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-family:var(--mono);font-weight:500;font-size:14px}
+.card:nth-child(3n+2) .dot{color:var(--coral-ink)}
+.card:nth-child(3n) .dot{color:var(--mint)}
+.card h3{font-size:1.25rem;font-weight:500}
+.card p{color:var(--muted);font-size:16px}
+
+.toolbox{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.group{background:var(--brand-soft);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.group h3{font-size:1.05rem;font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:var(--mono);font-size:12.5px;padding:5px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--fg)}
+
+.timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.job{position:relative;padding-bottom:36px;display:flex;flex-direction:column;gap:8px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-28px;top:7px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--brand)}
+.job:first-child::before{background:var(--coral);border-color:var(--coral)}
+.job .when{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.job h3{font-size:1.4rem;font-weight:500}
+.job .org{font-weight:600;color:var(--brand)}
+.job p{color:var(--muted);max-width:66ch}
+.job ul{margin:0;padding-left:1.1em;color:var(--muted);max-width:66ch}
+.job li{margin-block:3px}
+
+.certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cert{border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px;background:var(--brand-soft);border:1px solid var(--line);min-width:0}
+.cert .code{font-family:var(--display);font-size:2.2rem;font-weight:700;color:var(--brand);letter-spacing:-.01em;line-height:1.05}
+.cert h3{font-size:1.05rem;font-weight:500}
+.cert .year{font-family:var(--mono);font-size:12px;color:var(--coral-ink);letter-spacing:.08em}
+.more{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.more .label{margin-right:6px}
+
+.connect{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(28px,5vw,52px);display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.connect h2{max-width:20ch}
+.connect .btn.primary{background:var(--brand);color:var(--brand-ink)}
+
+footer{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+
+@media (max-width:900px){
+  .cards,.toolbox,.certs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .story{grid-template-columns:minmax(0,1fr)}
+  .results{flex-direction:row}
+  .results .result{flex:1 1 0;min-width:0}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{gap:60px}
+  .cards,.toolbox,.certs{grid-template-columns:minmax(0,1fr)}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .results{flex-direction:column}
+  .hero{border-radius:18px}
+  .hero::before{width:300px;height:300px}
+  .hero::after{width:150px;height:150px;right:20px}
+}
+@media (prefers-reduced-motion: no-preference){
+  .card,.cert,.btn,.result{transition:transform .15s ease}
+  .card:hover,.cert:hover,.result:hover{transform:translateY(-3px)}
+}
+html{scroll-behavior:smooth}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="mark"><i aria-hidden="true"></i>Nitin Lalwani</span>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="id">
+      <span class="mono-badge" aria-hidden="true">NL</span>
+      <p class="label">Senior Business Systems Analyst · Scrum Master · Toronto</p>
     </div>
+    <h1>I turn complex needs into <em>clear</em>, delivered solutions.</h1>
+    <p class="lede">Seven years of business analysis and IT delivery, now focused on cybersecurity, risk and operational resilience. I sit between the business and the technology, so both sides get what they need.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/nitindlalwani/">Connect on LinkedIn</a>
+      <a class="btn ghost" href="#experience">See my experience</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>Since 2019</b><span>in IT delivery and analysis</span></div>
+      <div class="fact"><b>Toronto</b><span>Hybrid or remote</span></div>
+      <div class="fact"><b>CSM</b><span>Certified ScrumMaster</span></div>
+      <div class="fact"><b>AZ-900 · CC</b><span>Cloud and security certified</span></div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h2>Hey there, my name is Nitin</h2>
-                    <p>{{ site.bio }}</p>
-                </section>
-                <section>
-                    <h2>Follow me on ...</h2>
-                    <ul class="icons">
-                        <li><a href="{{ site.social_urls.facebook }}" class="icon fa-facebook"><span
-                                class="label">Facebook</span></a>
-                        </li>
-                        <li><a href="{{ site.social_urls.twitter }}" class="icon fa-twitter"><span
-                                class="label">Twitter</span></a>
-                        </li>
-                        <li><a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"><span
-                                class="label">Instagram</span></a>
-                        </li>
-                        <li><a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble"><span
-                                class="label">Dribbble</span></a>
-                        </li>
-                        <li><a href="{{ site.social_urls.github }}" class="icon fa-github"><span
-                                class="label">GitHub</span></a>
-                        </li>
-                        <li><a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin"><span
-                                class="label">LinkedIn</span></a>
-                        </li>
-                    </ul>
-                </section>
-                <p class="copyright">
-                    &copy; {{ site.author }}. Design: {{ site.web_design }}
-                </p>
-            </div>
-            <div>
-                <section>
-                    <h2>Get in touch</h2>
-                    <form method="post" action="#">
-                        <div class="field half first">
-                            <input type="text" name="name" id="name" placeholder="Name"/>
-                        </div>
-                        <div class="field half">
-                            <input type="text" name="email" id="email" placeholder="Email"/>
-                        </div>
-                        <div class="field">
-                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send" class="special"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </section>
-            </div>
+  <section id="about" aria-labelledby="about-h">
+    <p class="label">About</p>
+    <h2 id="about-h">Making the complicated feel simple</h2>
+    <div class="story">
+      <div class="text">
+        <p>I'm a senior business systems analyst and Scrum Master based in Toronto. My work starts with listening. I sit with stakeholders, find out what they actually need, and shape it into requirements that a delivery team can build with confidence.</p>
+        <p>I began in IT project coordination, grew into business analysis, and now work on <strong>cybersecurity, third-party risk and operational resilience</strong> for a major Canadian bank. That path taught me to speak the language of both business leaders and engineers.</p>
+        <p>I care about <strong>clear documentation, honest status, and processes that get lighter over time</strong>. When a workflow can be automated, integrated or standardized, I like to be the person who spots it and makes the case.</p>
+      </div>
+      <div class="results" aria-label="Selected results">
+        <div class="result"><b>25%</b><span>fewer manual errors after automating data management and reporting.</span></div>
+        <div class="result"><b>18%</b><span>gain in operational efficiency from the same automation work.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" aria-labelledby="expertise-h">
+    <p class="label">Expertise</p>
+    <h2 id="expertise-h">What I do best</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="dot" aria-hidden="true">01</span>
+        <h3>Business analysis</h3>
+        <p>Requirements workshops, process analysis and solution design. I turn needs into BRDs, FRDs, user stories, process flows and acceptance criteria.</p>
+      </div>
+      <div class="card">
+        <span class="dot" aria-hidden="true">02</span>
+        <h3>Scrum mastery</h3>
+        <p>Backlog refinement, sprint planning, daily ceremonies, reviews and retrospectives, with a steady eye on removing blockers.</p>
+      </div>
+      <div class="card">
+        <span class="dot" aria-hidden="true">03</span>
+        <h3>Cybersecurity and risk technology</h3>
+        <p>Delivery for security monitoring, response automation, data protection, identity and governance platforms in a regulated environment.</p>
+      </div>
+      <div class="card">
+        <span class="dot" aria-hidden="true">04</span>
+        <h3>Process and automation</h3>
+        <p>Finding manual steps worth removing, then designing workflows, integrations and data quality controls that stick.</p>
+      </div>
+      <div class="card">
+        <span class="dot" aria-hidden="true">05</span>
+        <h3>Data and reporting</h3>
+        <p>Dashboards, KPIs and executive-ready reporting that help leaders monitor risk and make decisions quickly.</p>
+      </div>
+      <div class="card">
+        <span class="dot" aria-hidden="true">06</span>
+        <h3>Stakeholder partnership</h3>
+        <p>Working with senior leaders, security teams, vendors and technology partners from planning through implementation and UAT.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="tools-h">
+    <p class="label">Toolbox</p>
+    <h2 id="tools-h">Platforms and methods</h2>
+    <div class="toolbox">
+      <div class="group">
+        <h3>Security and risk platforms</h3>
+        <div class="tags">
+          <span class="tag">Microsoft Sentinel</span><span class="tag">Devo</span><span class="tag">XSOAR</span><span class="tag">FortiSOAR</span><span class="tag">Proofpoint</span><span class="tag">Microsoft Purview</span><span class="tag">Archer (GRC)</span>
         </div>
-    </footer>
+      </div>
+      <div class="group">
+        <h3>Analysis and delivery</h3>
+        <div class="tags">
+          <span class="tag">BRD / FRD</span><span class="tag">User stories</span><span class="tag">Process mapping</span><span class="tag">UAT</span><span class="tag">RACI</span><span class="tag">Agile / Scrum</span><span class="tag">Backlog management</span>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Data and tools</h3>
+        <div class="tags">
+          <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Jira</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <p class="label">Experience</p>
+    <h2 id="exp-h">Where I've worked</h2>
+    <div class="timeline">
+      <div class="job">
+        <span class="when">Jun 2023 to present</span>
+        <h3>Senior Consultant, Business Systems Analyst</h3>
+        <p class="org">CIBC · Toronto, hybrid</p>
+        <p>Lead business analysis and Scrum Master work across cybersecurity, third-party risk and operational resilience, partnering with business, technology, risk and security stakeholders.</p>
+        <ul>
+          <li>Drive requirements, process analysis, solution design and implementation for enterprise security and risk platforms.</li>
+          <li>Onboarded and integrated multiple data sources to strengthen business continuity and resilience capabilities.</li>
+          <li>Supported implementation and optimization of security monitoring, response automation and data loss prevention tools.</li>
+          <li>Automated incident response workflows and recommended process improvements that raised service delivery efficiency.</li>
+          <li>Produced BRDs, user stories, process maps, governance artifacts and executive reporting.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <span class="when">Aug 2021 to Jun 2023</span>
+        <h3>Business Systems Analyst</h3>
+        <p class="org">Screendollars · Freelance, remote</p>
+        <ul>
+          <li>Led process optimization by analyzing operational data and presenting insights to stakeholders and vendors.</li>
+          <li>Designed and delivered BI dashboards for risk monitoring and regulatory reporting.</li>
+          <li>Automated data management and reporting, cutting manual errors by 25% and improving efficiency by 18%.</li>
+          <li>Defined and tracked KPIs, and improved governance with workflows, escalation protocols and data quality controls.</li>
+          <li>Led UAT and maintained RACI matrices, project logs and process documentation.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <span class="when">May 2019 to Jun 2021</span>
+        <h3>Information Technology Project Coordinator</h3>
+        <p class="org">Uplers · On-site</p>
+        <p>Where I built my foundation in business requirements and project delivery, coordinating IT work from request through completion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" aria-labelledby="creds-h">
+    <p class="label">Credentials</p>
+    <h2 id="creds-h">Certifications</h2>
+    <div class="certs">
+      <div class="cert">
+        <span class="code">AZ-900</span>
+        <h3>Microsoft Certified: Azure Fundamentals</h3>
+        <span class="year">MICROSOFT · AUG 2026</span>
+      </div>
+      <div class="cert">
+        <span class="code">CC</span>
+        <h3>Certified in Cybersecurity</h3>
+        <span class="year">ISC2 · MAY 2026</span>
+      </div>
+      <div class="cert">
+        <span class="code">CSM</span>
+        <h3>Certified ScrumMaster</h3>
+        <span class="year">SCRUM ALLIANCE · APR 2022</span>
+      </div>
+    </div>
+    <div class="more">
+      <span class="label">Also completed</span>
+      <span class="tag">Business Analysis Foundations</span>
+      <span class="tag">SQL: Data Reporting and Analysis</span>
+      <span class="tag">Power BI: Dashboards for Beginners</span>
+      <span class="tag">Jira: Basic Administration</span>
+      <span class="tag">Excel Essential Training</span>
+    </div>
+  </section>
+
+  <section id="connect" aria-labelledby="connect-h">
+    <div class="connect">
+      <p class="label">Connect</p>
+      <h2 id="connect-h">Let's talk about what you're building</h2>
+      <p class="intro">If you're hiring for business analysis, Scrum or delivery leadership, or you'd like to compare notes on security and risk technology, I'd like to hear from you.</p>
+      <a class="btn primary" href="https://www.linkedin.com/in/nitindlalwani/">Message me on LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Nitin Lalwani · Toronto, Ontario</span>
+    <span class="label">Updated September 2026</span>
+  </footer>
 </div>
+</body>
+</html>
